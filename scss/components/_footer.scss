@@ -184,7 +184,7 @@ footer .nav-link {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem 0.8rem;
+    gap: 0.6rem 1.2rem;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 10px;
@@ -219,31 +219,21 @@ footer .nav-link {
 }
 
 @media (max-width: 430px) {
-  footer .nav-item {
-    // Forzar salto de línea después del tercer elemento (Galería)
-    &:nth-child(3) {
-      margin-right: 100%;
-    }
-  }
-  
-  footer .nav-link {
-    font-size: 0.9rem;
-    padding: 4px 6px;
-  }
-}
-
-@media (max-width: 480px) {
   .pie {
     padding: 25px 10px;
   }
   
   footer .navbar-nav {
-    max-width: 280px;
-    gap: 0.5rem 0.8rem;
+    gap: 0.4rem 0.6rem;
+  }
+  
+  // Forzar 3 arriba + 2 abajo centrados
+  footer .nav-item:nth-child(3) {
+    margin-right: 100%;
   }
   
   footer .nav-link {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding: 4px 6px;
   }
   
@@ -255,4 +245,3 @@ footer .nav-link {
     font-size: 0.9rem;
   }
 }
-
