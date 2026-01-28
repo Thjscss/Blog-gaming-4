@@ -276,7 +276,7 @@ nav.scrolled {
   max-width: 100%;
   border-top: 3px solid #0f9d58;
   background: linear-gradient(180deg, #1C1C1C 0%, #0d0d0d 100%);
-  padding: 40px 40px;
+  padding: clamp(20px, 5vw, 40px) clamp(5px, 5vw, 40px);
   margin-top: 60px;
   position: relative;
   overflow: hidden;
@@ -386,21 +386,22 @@ nav.scrolled {
   transform: translateY(0);
 }
 
-/* Navbar del footer mejorado */
+/* Media queries para responsive - mantener 5 enlaces en fila desde 300px hasta desktop */
+/* Navbar del footer con escalado fluido usando clamp */
 footer .navbar-nav {
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 1rem 2rem;
+  gap: clamp(0.1rem, 1vw, 1rem) clamp(0.2rem, 2vw, 2rem);
   max-width: 100%;
   margin: 0 auto;
 }
 
 footer .nav-link {
-  font-size: 1.05rem;
+  font-size: clamp(0.6rem, 2.5vw, 1.05rem);
   font-weight: 500;
   color: #FAFAFA;
   transition: color 0.3s ease;
-  padding: 8px 12px;
+  padding: clamp(3px, 1vw, 8px) clamp(2px, 1.5vw, 12px);
   white-space: nowrap;
 }
 footer .nav-link:hover, footer .nav-link:focus {
@@ -414,203 +415,31 @@ footer .nav-link[aria-current=page] {
 /* Separador entre navegación y suscripción - ancho completo */
 .bajopie {
   border-top: 1px solid rgba(15, 157, 88, 0.3);
-  margin-left: -40px;
-  margin-right: -40px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 30px;
+  margin-left: calc(-1 * clamp(5px, 5vw, 40px));
+  margin-right: calc(-1 * clamp(5px, 5vw, 40px));
+  padding-left: clamp(5px, 5vw, 40px);
+  padding-right: clamp(5px, 5vw, 40px);
+  padding-top: clamp(20px, 4vw, 30px);
   margin-top: 20px;
 }
 
-/* Media queries para responsive - mantener 5 enlaces en fila hasta 500px */
-/* Breakpoint a 800px - reducir espacio entre enlaces */
-@media (max-width: 800px) {
-  footer .navbar-nav {
-    gap: 0.8rem 1.8rem;
-  }
-  footer .nav-link {
-    font-size: 1rem;
-    padding: 8px 11px;
-  }
-}
-/* Breakpoint a 680px - reducir aún más */
-@media (max-width: 680px) {
-  .pie {
-    padding: 35px 25px;
-  }
-  footer .navbar-nav {
-    gap: 0.6rem 1.2rem;
-  }
-  footer .nav-link {
-    font-size: 0.95rem;
-    padding: 7px 9px;
-  }
-  .bajopie {
-    margin-left: -25px;
-    margin-right: -25px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-  .text-footer {
-    font-size: 1rem;
-  }
-}
-/* Breakpoint a 600px - reducir más */
+/* Ajuste del pie para escalado fluido */
 @media (max-width: 600px) {
   .pie {
-    padding: 32px 18px;
-  }
-  footer .navbar-nav {
-    gap: 0.5rem 1rem;
-  }
-  footer .nav-link {
-    font-size: 0.92rem;
-    padding: 6px 8px;
-  }
-  .bajopie {
-    margin-left: -18px;
-    margin-right: -18px;
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-}
-/* Breakpoint a 585px - ajuste crítico para mantener 5 en fila */
-@media (max-width: 585px) {
-  .pie {
-    padding: 30px 12px;
-  }
-  footer .navbar-nav {
-    gap: 0.4rem 0.7rem;
-  }
-  footer .nav-link {
-    font-size: 0.89rem;
-    padding: 6px 7px;
-  }
-  .bajopie {
-    margin-left: -12px;
-    margin-right: -12px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
-/* Breakpoint a 580px - compactar más para mantener 5 en fila */
-@media (max-width: 580px) {
-  .pie {
-    padding: 30px 10px;
-  }
-  footer .navbar-nav {
-    gap: 0.4rem 0.6rem;
-  }
-  footer .nav-link {
-    font-size: 0.88rem;
-    padding: 6px 6px;
-  }
-  .bajopie {
-    margin-left: -10px;
-    margin-right: -10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: clamp(18px, 5vw, 35px) clamp(5px, 2vw, 25px);
   }
   .text-footer {
-    font-size: 0.98rem;
-  }
-}
-/* Breakpoint a 480px - compactar al máximo manteniendo 5 en fila */
-@media (max-width: 480px) {
-  .pie {
-    padding: 28px 6px;
-  }
-  footer .navbar-nav {
-    gap: 0.25rem 0.4rem;
-  }
-  footer .nav-link {
-    font-size: 0.78rem;
-    padding: 5px 4px;
-  }
-  .bajopie {
-    margin-left: -6px;
-    margin-right: -6px;
-    padding-left: 6px;
-    padding-right: 6px;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
   }
   .formall {
-    padding: 0 5px;
+    padding: 0 clamp(5px, 2vw, 20px);
   }
   .formall input,
   .formall .btn-gaming {
     width: 100%;
   }
-  .text-footer {
-    font-size: 0.92rem;
-  }
-}
-/* Breakpoint a 400px - comprimir más manteniendo 5 en fila */
-@media (max-width: 400px) {
-  .pie {
-    padding: 25px 4px;
-  }
-  footer .navbar-nav {
-    gap: 0.2rem 0.3rem;
-  }
-  footer .nav-link {
-    font-size: 0.72rem;
-    padding: 4px 3px;
-  }
-  .bajopie {
-    margin-left: -4px;
-    margin-right: -4px;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-  .formall label,
-  .text-footer {
-    font-size: 0.88rem;
-  }
-}
-/* Breakpoint a 350px - ultra compacto manteniendo 5 en fila */
-@media (max-width: 350px) {
-  .pie {
-    padding: 22px 2px;
-  }
-  footer .navbar-nav {
-    gap: 0.15rem 0.25rem;
-  }
-  footer .nav-link {
-    font-size: 0.68rem;
-    padding: 4px 2px;
-  }
-  .bajopie {
-    margin-left: -2px;
-    margin-right: -2px;
-    padding-left: 2px;
-    padding-right: 2px;
-  }
-  .formall label,
-  .text-footer {
-    font-size: 0.85rem;
-  }
-}
-/* Breakpoint a 320px - mínimo absoluto manteniendo 5 en fila */
-@media (max-width: 320px) {
-  .pie {
-    padding: 20px 1px;
-  }
-  footer .navbar-nav {
-    gap: 0.1rem 0.2rem;
-  }
-  footer .nav-link {
-    font-size: 0.65rem;
-    padding: 3px 2px;
-  }
-  .bajopie {
-    margin-left: -1px;
-    margin-right: -1px;
-    padding-left: 1px;
-    padding-right: 1px;
-  }
-  .formall label,
-  .text-footer {
-    font-size: 0.82rem;
+  .formall label {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
   }
 }
 /* 2. Definimos la fuente base */
