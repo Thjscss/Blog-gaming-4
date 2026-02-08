@@ -156,22 +156,6 @@ footer .nav-link {
   }
 }
 
-/* Simulador link - debajo de los demás en tablet/mobile/laptop */
-footer .nav-item-simulador {
-  flex-basis: 100%;
-  text-align: center;
-  margin-top: 0.3rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid rgba(vars.$primary-accent, 0.2);
-
-  @media (min-width: 1200px) {
-    flex-basis: auto;
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
-  }
-}
-
 /* Separador entre navegación y suscripción - ancho completo */
 .bajopie {
   border-top: 1px solid rgba(vars.$primary-accent, 0.3);
@@ -183,26 +167,4 @@ footer .nav-item-simulador {
   margin-top: 20px;
 }
 
-/* Ajuste del pie para escalado fluido */
-@media (max-width: 600px) {
-  .pie {
-    padding: clamp(18px, 5vw, 35px) clamp(5px, 2vw, 25px);
-  }
-  
-  .text-footer {
-    font-size: clamp(0.8rem, 2.5vw, 1rem);
-  }
-  
-  .formall {
-    padding: 0 clamp(5px, 2vw, 20px);
-  }
-  
-  .formall input,
-  .formall .btn-gaming {
-    width: 100%;
-  }
-  
-  .formall label {
-    font-size: clamp(0.8rem, 2.5vw, 1rem);
-  }
-}
+/* Los estilos del footer son consistentes en todas las resoluciones (igual que tablet) */
