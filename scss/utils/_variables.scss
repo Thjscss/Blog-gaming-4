@@ -1,7 +1,7 @@
 // ==========================================
 // VARIABLES GLOBALES - Blog Gaming
 // ==========================================
-
+@use 'sass:color';
 // Colores principales
 $bg-color: #212121; // fondo principal
 $bg-color-nav: #1C1C1C; // fondo de la barra de navegación y footer
@@ -17,10 +17,9 @@ $text-muted: #9e9e9e;
 $text-light: rgba(250, 250, 250, 0.7);
 
 // Gradientes
-$gradient-primary: linear-gradient(135deg, $primary-accent 0%, darken($primary-accent, 15%) 100%);
-$gradient-dark: linear-gradient(180deg, $bg-color-nav 0%, darken($bg-color-nav, 5%) 100%);
-$gradient-card: linear-gradient(135deg, $bg-color-nav 0%, lighten($bg-color-nav, 5%) 100%);
-
+$gradient-primary: linear-gradient(135deg, $primary-accent 0%, color.adjust($primary-accent, $lightness: -15%) 100%);
+$gradient-dark: linear-gradient(180deg, $bg-color-nav 0%, color.adjust($bg-color-nav, $lightness: -5%) 100%);
+$gradient-card: linear-gradient(135deg, $bg-color-nav 0%, color.adjust($bg-color-nav, $lightness: 5%) 100%);
 // Breakpoints
 $breakpoint-mobile: 576px;
 $breakpoint-tablet: 768px;
