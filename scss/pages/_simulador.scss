@@ -1,0 +1,204 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mixins;
+
+// =============================================
+// ESTILOS ESPECÍFICOS PARA LA PÁGINA SIMULADOR
+// =============================================
+
+// Caja de instrucciones
+.instrucciones-box {
+    margin-top: 30px;
+    text-align: center;
+}
+
+// =============================================
+// CORRECCIONES DEL FOOTER EN SIMULADOR
+// =============================================
+
+// Footer - Links responsivos
+.pie {
+    .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1rem;
+        
+        @media (max-width: 576px) {
+            gap: 0.25rem 0.5rem;
+            
+            .nav-link {
+                font-size: 0.85rem;
+                padding: 0.25rem 0.5rem;
+            }
+        }
+    }
+    
+    // Asegurar que los links no se corten
+    .nav-item {
+        white-space: nowrap;
+    }
+}
+
+// Footer nav específico para simulador
+.footer-nav-simulador {
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(vars.$primary-accent, 0.4);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    
+    // Quitar focus de los links
+    .nav-link:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    
+    // Simulador siempre abajo excepto en desktop (>= 992px)
+    @media (max-width: 991px) {
+        max-width: 90%;
+        padding: 1rem;
+        
+        // Primeros 5 items en la primera fila
+        .nav-item:not(.nav-item-simulador) {
+            flex: 0 0 auto;
+        }
+        
+        // Simulador ocupa su propia fila
+        .nav-item-simulador {
+            flex-basis: 100%;
+            text-align: center;
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid rgba(vars.$primary-accent, 0.2);
+        }
+    }
+    
+    // Entre 650px y 576px - reorganizar en 2 filas + simulador
+    @media (max-width: 680px) {
+        max-width: 95%;
+        padding: 0.75rem 1rem;
+        gap: 0.4rem 1rem;
+        
+        .nav-item:not(.nav-item-simulador) {
+            flex: 0 0 auto;
+        }
+        
+        .nav-link {
+            font-size: 0.9rem;
+            padding: 0.3rem 0.5rem;
+        }
+    }
+    
+    // Menos de 576px - links más pequeños
+    @media (max-width: 576px) {
+        max-width: 95%;
+        padding: 0.75rem;
+        gap: 0.3rem 0.6rem;
+        
+        .nav-link {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.4rem;
+        }
+    }
+    
+    // Menos de 480px - columna vertical
+    @media (max-width: 480px) {
+        padding: 0.75rem 0.5rem;
+        gap: 0.2rem;
+        
+        // Todos los items en columna
+        .nav-item {
+            flex-basis: 100%;
+            text-align: center;
+        }
+        
+        .nav-item-simulador {
+            margin-top: 0.25rem;
+            padding-top: 0.5rem;
+        }
+        
+        .nav-link {
+            font-size: 0.85rem;
+            padding: 0.4rem 0.5rem;
+            display: block;
+        }
+    }
+}
+
+// =============================================
+// CORRECCIONES DEL NAVBAR EN SIMULADOR
+// =============================================
+
+// Quitar focus visible de los links del navbar
+.navbar .nav-link:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+// =============================================
+// CONTENIDO PRINCIPAL DEL SIMULADOR
+// =============================================
+
+// Ajustes del main content para que no quede debajo del navbar
+#main-content {
+    padding-top: 7rem;
+    min-height: calc(100vh - 200px);
+}
+
+// Contenedor de la sección principal
+.section-container {
+    h1 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        text-align: center;
+        margin-bottom: 2rem;
+        color: vars.$text-color;
+    }
+}
+
+// Hero section del simulador
+.hero-section {
+    h2 {
+        color: vars.$text-color;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        color: vars.$text-color;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+    }
+}
+
+// Divisor visual
+.divider {
+    width: 100%;
+    max-width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, vars.$primary-accent, transparent);
+    margin: 2rem auto;
+}
+
+// Botón iniciar simulador
+#btnIniciar {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+// Caja de producto/instrucciones
+.product-card {
+    background: rgba(vars.$primary-accent, 0.1);
+    border: 1px solid rgba(vars.$primary-accent, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    
+    p {
+        margin: 0;
+        color: vars.$text-color;
+    }
+}

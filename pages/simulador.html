@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta Tags Básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Simulador de recomendación de videojuegos - Blog Gaming">
+    <meta name="keywords" content="simulador, videojuegos, recomendaciones, gaming">
+    <meta name="author" content="Thomas Miranda - Blog Gaming">
+    <meta name="robots" content="index, follow">
+    
+    <title>Simulador de Videojuegos | Blog Gaming</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="../img/Logo.jpg">
+    <link rel="apple-touch-icon" href="../img/Logo.jpg">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- AOS Animation (local) -->
+    <link rel="stylesheet" href="../css/aos.css">
+    
+    <!-- Tu CSS existente -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <!-- NAVEGACIÓN PRINCIPAL CON ACCESIBILIDAD MEJORADA -->
+        <nav class="navbar bg-black" role="navigation" aria-label="Navegación principal">
+            <div class="container-fluid">
+                <!-- Botón para abrir menú móvil con aria-label para lectores de pantalla -->
+                <button class="navbar-toggler border d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#menuLateral" aria-controls="menuLateral" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start text-bg-black" tabindex="-1" id="menuLateral"
+                    aria-labelledby="offcanvasLabel" aria-label="Menú de navegación lateral">
+
+                    <div class="offcanvas-header">
+                        <h2 class="offcanvas-title ms-2 mt-3 px-2 py-2" id="offcanvasLabel">Menú</h2>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 border border-3 rounded-1">
+                            <!-- Botón para cerrar menú con aria-label descriptivo -->
+                            <button type="button" class="btn-gaming" data-bs-dismiss="offcanvas" aria-label="Cerrar menú de navegación">
+                                Cerrar Menú
+                            </button>
+                            <li class="nav-item"><a class="nav-link mx-5 px-2 py-2" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link mx-5 px-2 py-2" href="productos.html">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link mx-5 px-2 py-2" href="galeria.html">Galería</a></li>
+                            <li class="nav-item"><a class="nav-link mx-5 px-2 py-2" href="quienesomos.html">Quiénes somos</a></li>
+                            <li class="nav-item"><a class="nav-link mx-5 px-2 py-2" href="contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link mx-5 px-2 py-2" href="simulador.html">Simulador</a></li>
+                        </ul>
+                        <div>
+                            <picture class="mt-3 border border-3 rounded-1 navbar-nav">
+                                <img src="../img/barranav/anunciobarra.jpg" class="imgbar rounded-1" alt="Anuncio de productos gaming" aria-hidden="true">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="navbar-brand mx-auto m-0 d-lg-none">Blog gaming</h1>
+            </div>
+            <div class="container-fluid d-none d-lg-flex">
+                <div>
+                    <h2 class="navbar-brand mx-auto m-0 ps-2">Blog gaming</h2>
+                </div>
+                <div class="d-none d-lg-block border-secondary mt-3 mx-auto px-2">
+                    <ul class="navbar-nav d-flex flex-row justify-content-center gap-4 py-2">
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="quienesomos.html">Quiénes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="simulador.html">Simulador</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="main-content">
+        <section>
+            <div class="section-container">
+                <h1>🎮 Simulador de Recomendación de Videojuegos</h1>
+                
+                <div class="hero-section">
+                    <h2>Descripción del Proyecto</h2>
+                    <p class="hero-subtitle">
+                        Este simulador está diseñado para ayudar a los gamers a encontrar su próximo juego ideal. 
+                        A través de una serie de preguntas interactivas sobre preferencias de género, plataforma y 
+                        estilo de juego, el sistema procesa las respuestas y genera recomendaciones personalizadas.
+                    </p>
+                    <p class="hero-subtitle">
+                        El simulador utiliza arrays de juegos categorizados, funciones para procesar datos del usuario, 
+                        y estructuras condicionales para filtrar las mejores opciones. La interacción se realiza mediante 
+                        la consola de JavaScript y cuadros de diálogo del navegador.
+                    </p>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <button class="btn-gaming" id="btnIniciar">🚀 Iniciar Simulador</button>
+                
+                <div class="product-card" style="margin-top: 30px; text-align: center;">
+                    <p><strong>💡 Instrucciones:</strong> Presiona F12 para abrir la consola del navegador y haz clic en el botón para comenzar</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="pie" role="contentinfo">
+        <nav aria-label="Navegación del pie de página">
+            <div class="py-2 mx-auto">
+                <ul class="navbar-nav footer-nav-simulador d-flex flex-row flex-wrap justify-content-center gap-3 py-2">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="quienesomos.html">Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item nav-item-simulador">
+                        <a class="nav-link text-white" href="simulador.html">Simulador</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="bajopie text-center px-2 mx-5">
+            <p class="mt-3 py-3 text-footer">© 2025 Blog Gaming - Thomas Miranda. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Botón volver arriba -->
+    <button id="backToTop" aria-label="Volver arriba">↑</button>
+
+    <!-- ⚠️ IMPORTANTE: Ruta corregida con ../ -->
+    <script src="../js/simulador.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous" defer></script>
+    
+    <!-- AOS Animation (local) -->
+    <script src="../js/vendor/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>

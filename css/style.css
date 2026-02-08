@@ -1239,4 +1239,162 @@ figure {
   animation: fade-in 0.6s ease both;
 }
 
+/*
+ * Blog Gaming - Estilos Principales
+ * Autor: Thomas Miranda
+ * 
+ * @use es el estándar recomendado (reemplaza @import deprecated)
+ */
+.instrucciones-box {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pie .navbar-nav {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+}
+@media (max-width: 576px) {
+  .pie .navbar-nav {
+    gap: 0.25rem 0.5rem;
+  }
+  .pie .navbar-nav .nav-link {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+.pie .nav-item {
+  white-space: nowrap;
+}
+
+.footer-nav-simulador {
+  background: rgba(30, 30, 30, 0.6);
+  border: 1px solid rgba(15, 157, 88, 0.4);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.footer-nav-simulador .nav-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+@media (max-width: 991px) {
+  .footer-nav-simulador {
+    max-width: 90%;
+    padding: 1rem;
+  }
+  .footer-nav-simulador .nav-item:not(.nav-item-simulador) {
+    flex: 0 0 auto;
+  }
+  .footer-nav-simulador .nav-item-simulador {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(15, 157, 88, 0.2);
+  }
+}
+@media (max-width: 680px) {
+  .footer-nav-simulador {
+    max-width: 95%;
+    padding: 0.75rem 1rem;
+    gap: 0.4rem 1rem;
+  }
+  .footer-nav-simulador .nav-item:not(.nav-item-simulador) {
+    flex: 0 0 auto;
+  }
+  .footer-nav-simulador .nav-link {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .footer-nav-simulador {
+    max-width: 95%;
+    padding: 0.75rem;
+    gap: 0.3rem 0.6rem;
+  }
+  .footer-nav-simulador .nav-link {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .footer-nav-simulador {
+    padding: 0.75rem 0.5rem;
+    gap: 0.2rem;
+  }
+  .footer-nav-simulador .nav-item {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .footer-nav-simulador .nav-item-simulador {
+    margin-top: 0.25rem;
+    padding-top: 0.5rem;
+  }
+  .footer-nav-simulador .nav-link {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.5rem;
+    display: block;
+  }
+}
+
+.navbar .nav-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#main-content {
+  padding-top: 7rem;
+  min-height: calc(100vh - 200px);
+}
+
+.section-container h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #FAFAFA;
+}
+
+.hero-section h2 {
+  color: #FAFAFA;
+  margin-bottom: 1.5rem;
+}
+.hero-section .hero-subtitle {
+  color: #FAFAFA;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 100%;
+  max-width: 200px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #0f9d58, transparent);
+  margin: 2rem auto;
+}
+
+#btnIniciar {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+}
+#btnIniciar:hover {
+  transform: scale(1.05);
+}
+
+.product-card {
+  background: rgba(15, 157, 88, 0.1);
+  border: 1px solid rgba(15, 157, 88, 0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.product-card p {
+  margin: 0;
+  color: #FAFAFA;
+}
+
 /*# sourceMappingURL=style.css.map */
