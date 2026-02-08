@@ -1,6 +1,7 @@
 // ==========================================
 // RESET Y ESTILOS BASE
 // ==========================================
+@use 'sass:color';
 @use '../utils/variables' as vars;
 *,
 *::before,
@@ -96,7 +97,7 @@ figure img {
   border-radius: 5px;
   
   &:hover {
-    background: lighten(vars.$primary-accent, 10%);
+    background: color.adjust(vars.$primary-accent, $lightness: 10%);
   }
 }
 

@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../utils/variables' as v;
 @use '../utils/mixins' as mixins;
 
@@ -130,7 +131,7 @@
     transition: color v.$transition-fast;
     
     &:hover {
-        color: lighten(v.$primary-accent, 15%);
+        color: color.adjust(v.$primary-accent, $lightness: 15%);
     }
     
     &:focus {
@@ -150,7 +151,7 @@
     transition: all v.$transition-normal;
     
     &:hover {
-        border-color: lighten(v.$primary-accent, 10%);
+        border-color: color.adjust(v.$primary-accent, $lightness: 10%);
         box-shadow: 0 0 15px rgba(v.$primary-accent, 0.3);
     }
 }
